@@ -7,7 +7,7 @@ function QuestionList() {
   useEffect(()=>{
     fetch('http://localhost:4000/questions')
     .then(resp => resp.json())
-    .then(quiz => console.log(quiz))
+    .then(quiz => setQuestions(quiz))
   },[])
 
   const quizzes = questions.map((quiz)=>{
